@@ -1,0 +1,32 @@
+
+@import 'variables';
+
+header {
+
+	.navbar {
+        background-color: $black;
+		border-radius: 0;
+
+		&.navbar-inverse .navbar-nav > .active > a {
+            background-color: $black;
+		}
+        
+
+		.lang .selected {
+			color: #333;
+		}
+
+		li.active a {
+			color:white !important;
+		}
+        
+        .navbar-brand {
+            padding: 0;
+            margin-left: 0.625rem;
+            
+            img {
+                margin-top: -0.3125rem;
+            }
+        }
+	}
+}

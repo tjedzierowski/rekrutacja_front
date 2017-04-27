@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="Rekrutacja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rekrutacja</title>
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+
+    <body ng-controller="mainController">
+
+        <header>
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" ui-sref="home">
+                            <img alt="CUBE.ITG S.A." src="./img/cubeitgLogo.png" />
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{ active: isActive('/home')}" ng-click="navCollapsed = true"><a ui-sref="home"><i class="fa fa-home"></i></a></li>
+                            <li ng-class="{ active: isActive('/page1')}" ng-click="navCollapsed = true"><a  ui-sref="page1">Users</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="content">
+            <div ui-view="mainView" ></div>
+        </section>
+
+        <!-- inject:js -->
+        <!-- endinject -->
+    </body>
+
+</html>
